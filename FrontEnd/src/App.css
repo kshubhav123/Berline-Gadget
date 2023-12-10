@@ -1,0 +1,78 @@
+
+
+*{
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.navbar {
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-brand {
+    color: #078dee;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #343a40 !important;
+  }
+  
+  .nav-link:hover {
+    color: #078dee !important;
+    font-weight: 700 !important;
+  }
+
+  .nav-link:focus{
+    color: #078dee !important;
+    font-weight: bold !important;
+  }
+  
+  .banner_down_card :hover {
+    background-color: #078dee !important;
+    color: white !important;
+  }
+  
+  .vertical-line {
+    width: 5px;
+    height: 2rem;
+    background-color: black;
+  }
+  
+  .product-vertical-line {
+    border-left: 1px solid black;
+    height: 30px;
+    margin: 0 10px;
+  }
+  
+  .capitalize-first {
+    text-transform: capitalize;
+  }
+  
+
+  .admin_nav_link:hover{
+    background: linear-gradient(90deg, rgb(58, 145, 204) 42%, rgb(3, 104, 175) 100%) !important;
+    color: white !important;
+  }
+
+  .product-form-button {
+    background: linear-gradient(90deg, rgb(58, 145, 204) 42%, rgb(3, 104, 175) 100%) !important;
+    border: none;
+    border-radius: 4px;
+    color: #fff !important;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .category-form-button{
+    background: linear-gradient(90deg, rgb(58, 145, 204) 42%, rgb(3, 104, 175) 100%) !important;
+    border: none !important;
+    border-radius: 4px;
+    color: #fff !important;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .brand_items{
+    color: black;
+  }
