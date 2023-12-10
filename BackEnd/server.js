@@ -22,9 +22,9 @@ app.use(bodyParser.json({ limit: "2mb" }))
 app.use(cors())
 
 
-if(process.env.NODE_ENV="production"){
-    app.use(express.static('client/build'))
-}
+// if(process.env.NODE_ENV="production"){
+//     app.use(express.static('client/build'))
+// }
 
 
 
@@ -32,5 +32,7 @@ if(process.env.NODE_ENV="production"){
 fs.readdirSync("./routes").map((r)=>app.use("/api",require("./routes/"+ r)));
 
 //connction
-const port = process.env.SERVER_PORT || 8000;
+// const port = process.env.SERVER_PORT || 8000;
+const port =  8001;
+
 app.listen({ port }, () => console.log(`Server run on the ${port}`));
