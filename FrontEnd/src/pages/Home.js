@@ -20,32 +20,32 @@ const Home = () => {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/July/Attachbanner/D51285990_WLA_Attach_JulyAcc_Mob_Hero_1242x450_2.jpg" height="500" className='w-100' alt="Image 1" />
-            <div class="container">
+          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/July/Attachbanner/D51285990_WLA_Attach_JulyAcc_Mob_Hero_1242x450_2.jpg" className='w-100 banner-img' alt="Image 1" />
+            {/* <div class="container">
               <div class="carousel-caption text-start">
                 <h1>New Collection</h1>
                 Some representative placeholder content for the first slide of the carousel.
               </div>
-            </div>
+            </div> */}
           </div>
           <div class="carousel-item">
-            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/vinambia/MSOAug/D80228526_WLD_5Gstore_BAU_DesignSIM_1242x500final.jpg" height="500" className='w-100' alt="Image 1" />
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/vinambia/MSOAug/D80228526_WLD_5Gstore_BAU_DesignSIM_1242x500final.jpg"  className='w-100 banner-img' alt="Image 1" />
           
-            <div class="container">
+            {/* <div class="container">
               <div class="carousel-caption">
                 <h1>New Brands</h1>
                 Some representative placeholder content for the second slide of the carousel.
               </div>
-            </div>
+            </div> */}
           </div>
           <div class="carousel-item">
-            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/katariy/Category_page/July2023/topbanner_A.jpg" height="500" className='w-100' alt="Image 1" />
-            <div class="container">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/katariy/Category_page/July2023/topbanner_A.jpg" className='w-100 banner-img' alt="Image 1" />
+            {/* <div class="container">
               <div class="carousel-caption text-end">
                 <h1>New Mobile</h1>
                 Some representative placeholder content for the third slide of this carousel.
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
