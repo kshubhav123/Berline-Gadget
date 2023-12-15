@@ -13,8 +13,8 @@ import { auth } from './Firebase';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import { userCurrent } from './functions/auth';
 import UserRoute from './components/routes/UserRoute';
-import  History  from './pages/user/History';
-import  Password  from './pages/user/Password';
+import History from './pages/user/History';
+import Password from './pages/user/Password';
 import AdminRoute from './components/routes/AdminRoute';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import CreateCategory from './pages/admin/category/CreateCategory';
@@ -42,71 +42,70 @@ import Brand from './pages/Brand';
 
 const App = () => {
 
-const dispatch=useDispatch()
-useEffect(() => {
-  const unsubscribe=auth.onAuthStateChanged(async (user)=>{
-    if(user){
-      const idTokenResult=await user.getIdTokenResult();
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        const idTokenResult = await user.getIdTokenResult();
 
-      userCurrent(idTokenResult.token)
-      .then((res) => {
-          dispatch({
+        userCurrent(idTokenResult.token)
+          .then((res) => {
+            dispatch({
               type: "LOGGED_IN_USER",
               payload: {
-                  name: res.data.name,
-                  email: res.data.email,
-                  token: idTokenResult.token,
-                  role: res.data.role,
-                  _id: res.data._id,
+                name: res.data.name,
+                email: res.data.email,
+                token: idTokenResult.token,
+                role: res.data.role,
+                _id: res.data._id,
               },
-          })
-      }).catch((err)=>console.log(err));
-    }
-  })
+            })
+          }).catch((err) => console.log(err));
+      }
+    })
 
-  return () => unsubscribe();
-}, [dispatch])
+    return () => unsubscribe();
+  }, [dispatch])
 
 
 
 
   return (
     <React.Fragment>
-        <Header/>
-        <SideDrawer />
-        <ToastContainer/>
+      <Header />
+      <SideDrawer />
+      <ToastContainer />
       <Routes>
-        
         <Route path="/" exact element={<Home />} />
         <Route path="/register" exact element={<Register />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/register/complete" exact element={<RegisterComplete />} />
         <Route path="/forgot/password" exact element={<ForgotPassword />} />
-        <Route path="/user/history" exact element={ <UserRoute>  <History/> </UserRoute>}  />
-        <Route path="/user/password" exact element={ <UserRoute>  <Password/> </UserRoute>}  />
-        <Route path="/admin/dashboard" exact element={ <AdminRoute>  <AdminDashboard/> </AdminRoute>}  />
-        <Route path="/admin/category" exact element={ <AdminRoute>  <CreateCategory/> </AdminRoute>}  />
-        <Route path="/admin/brand" exact element={ <AdminRoute>  <CreateBrand/> </AdminRoute>}  />
-        <Route path="/admin/category/:slug" exact element={ <AdminRoute>  <UpdateCategory/> </AdminRoute>}  />
-        <Route path="/admin/sub" exact element={ <AdminRoute>  <SubCreate/> </AdminRoute>}  />
-        <Route path="/admin/sub/:slug" exact element={ <AdminRoute>  <SubUpdate/> </AdminRoute>}  />
-        <Route path="/admin/product" exact element={ <AdminRoute>  <CreateProduct/> </AdminRoute>}  />
-        <Route path="/admin/products" exact element={ <AdminRoute>  <AllProduct/> </AdminRoute>}  />
-        <Route path="/admin/products/:slug" exact element={ <AdminRoute>  <UpdateProduct/> </AdminRoute>}  />
+        <Route path="/user/history" exact element={<UserRoute>  <History /> </UserRoute>} />
+        <Route path="/user/password" exact element={<UserRoute>  <Password /> </UserRoute>} />
+        <Route path="/admin/dashboard" exact element={<AdminRoute>  <AdminDashboard /> </AdminRoute>} />
+        <Route path="/admin/category" exact element={<AdminRoute>  <CreateCategory /> </AdminRoute>} />
+        <Route path="/admin/brand" exact element={<AdminRoute>  <CreateBrand /> </AdminRoute>} />
+        <Route path="/admin/category/:slug" exact element={<AdminRoute>  <UpdateCategory /> </AdminRoute>} />
+        <Route path="/admin/sub" exact element={<AdminRoute>  <SubCreate /> </AdminRoute>} />
+        <Route path="/admin/sub/:slug" exact element={<AdminRoute>  <SubUpdate /> </AdminRoute>} />
+        <Route path="/admin/product" exact element={<AdminRoute>  <CreateProduct /> </AdminRoute>} />
+        <Route path="/admin/products" exact element={<AdminRoute>  <AllProduct /> </AdminRoute>} />
+        <Route path="/admin/products/:slug" exact element={<AdminRoute>  <UpdateProduct /> </AdminRoute>} />
         <Route path="/product/:slug" exact element={<Product />} />
         <Route path="/category/:slug" exact element={<CategoryHome />} />
         <Route path="/sub/:slug" exact element={<SubHome />} />
         <Route path="/shop" exact element={<Shop />} />
-        <Route path="/shoplist/:brand" exact element={<Shoplist/>} />
-        <Route path="/brandslist" exact element={<Brand/>} />
+        <Route path="/shoplist/:brand" exact element={<Shoplist />} />
+        <Route path="/brandslist" exact element={<Brand />} />
         <Route path="/cart" exact element={<Cart />} />
-        <Route path="/checkout" exact element={ <UserRoute>  <Checkout/> </UserRoute>}  />
-        <Route path="/admin/coupan" exact element={ <AdminRoute>  <CreateCouponPage/> </AdminRoute>}  />
-        <Route path="/payment" exact element={ <UserRoute>  <Payment/> </UserRoute>}  />
+        <Route path="/checkout" exact element={<UserRoute>  <Checkout /> </UserRoute>} />
+        <Route path="/admin/coupan" exact element={<AdminRoute>  <CreateCouponPage /> </AdminRoute>} />
+        <Route path="/payment" exact element={<UserRoute>  <Payment /> </UserRoute>} />
 
 
-</Routes>
-        <Footer/>
+      </Routes>
+      <Footer />
     </React.Fragment>
   );
 }

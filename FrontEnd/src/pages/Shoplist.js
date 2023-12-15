@@ -20,11 +20,12 @@ const Shoplist = () => {
         <> 
             <div className='container mt-4'>
                 <div className='row'>
-                <div className='fs-3 fw-bold '> {brand} Products List  </div>
-                {product.length < 1 && <p className='h4 text-primary py-5 text-center'> No Product Found </p>}
+                <div className='h3 fw-bold text-center'> { brand.toLocaleUpperCase()} Products List  </div>
+                
+                {product.length < 1 && <p className='h4 text-primary my-5 text-center'> No Product Found </p>}
                     {product.map((products, index) => {
                         return (
-                            <div className='col-md-3 px-2' key={index}>
+                            <div className='col-lg-3 col-md-6 col-sm-12' key={index}>
                                 <ProductCard products={products} />
                             </div>
                         )

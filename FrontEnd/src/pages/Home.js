@@ -5,6 +5,9 @@ import BestSellers from '../components/home/BestSellers';
 import NewArrivels from '../components/home/NewArrivels';
 import SubsList from '../components/subs/SubsList';
 import Ourbrands from '../components/home/Ourbrands';
+import Banner1 from '../assets/images/banner-1.png'
+import Banner2 from '../assets/images/banner-2.png'
+import Banner3 from '../assets/images/banner-3.png'
 
 const Home = () => {
 
@@ -20,30 +23,30 @@ const Home = () => {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/July/Attachbanner/D51285990_WLA_Attach_JulyAcc_Mob_Hero_1242x450_2.jpg" className='w-100 banner-img' alt="Image 1" />
+            <img src={Banner1} className='w-100 banner-img' alt="Image 1" />
             {/* <div class="container">
               <div class="carousel-caption text-start">
-                <h1>New Collection</h1>
-                Some representative placeholder content for the first slide of the carousel.
+                <h1>Powerful Computing</h1>
+                <p>Discover our range of high-performance laptops, perfect for work or play.</p>
               </div>
             </div> */}
           </div>
           <div class="carousel-item">
-            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/vinambia/MSOAug/D80228526_WLD_5Gstore_BAU_DesignSIM_1242x500final.jpg"  className='w-100 banner-img' alt="Image 1" />
-          
+            <img src={Banner2} className='w-100 banner-img' alt="Image 1" />
+
             {/* <div class="container">
               <div class="carousel-caption">
-                <h1>New Brands</h1>
-                Some representative placeholder content for the second slide of the carousel.
+                <h1>Stay Connected Anywhere</h1>
+                <p>Explore our latest collection of smartphones, designed to keep you connected on-the-go.</p>
               </div>
             </div> */}
           </div>
           <div class="carousel-item">
-            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/katariy/Category_page/July2023/topbanner_A.jpg" className='w-100 banner-img' alt="Image 1" />
+            <img src={Banner3} className='w-100 banner-img' alt="Image 1" />
             {/* <div class="container">
               <div class="carousel-caption text-end">
-                <h1>New Mobile</h1>
-                Some representative placeholder content for the third slide of this carousel.
+                <h1>Immersive Audio Experience</h1>
+                <p className='text-dark'>Immerse yourself in superior sound quality with our premium headphones selection.</p>
               </div>
             </div> */}
           </div>
@@ -59,26 +62,26 @@ const Home = () => {
       </div>
 
 
-      <div className='container my-5 py-5'>
+      <div className='container py-5'>
         <div className='row'>
-          <div className='col-md banner_down_card my-2 px-2'>
+          <div className='col-lg-4 col-md-12 banner_down_card my-2'>
             <div className='card border-0 rounded-4 shadow text-center'>
               <i class="fa-solid fa-truck-fast mt-5 fs-4"></i>
-              <div className='text-center mt-3 h4 fw-bold'>FREE SHOPPING</div>
+              <div className='text-center mt-3 h5 fw-bold'>FREE SHOPPING</div>
               <div className='text-center mb-5'>Free shipping over $100</div>
             </div>
           </div>
-          <div className='col-md banner_down_card my-2 px-2'>
+          <div className='col-lg-4 col-md-12 banner_down_card my-2'>
             <div className='card border-0 rounded-4 shadow text-center'>
               <i class="fa-solid fa-money-check-dollar mt-5 fs-4"></i>
-              <div className='text-center mt-3 h4 fw-bold'>Money Back Gurantee</div>
+              <div className='text-center mt-3 h5 fw-bold'>Money Back Gurantee</div>
               <div className='text-center mb-5'>Send to you within 24 hours</div>
             </div>
           </div>
-          <div className='col-md banner_down_card my-2 px-2'>
+          <div className='col-lg-4 col-md-12 banner_down_card my-2'>
             <div className='card border-0 rounded-4 shadow text-center'>
               <i class="fa-solid fa-phone mt-5 fs-4"></i>
-              <div className='text-center mt-3 h4 fw-bold'>24 HOURS SUPPORT</div>
+              <div className='text-center mt-3 h5 fw-bold'>24 HOURS SUPPORT</div>
               <div className='text-center mb-5'>Call : 021 546 256658</div>
             </div>
           </div>
@@ -91,11 +94,11 @@ const Home = () => {
         <div class="h2 text-start">
           NEW ARRIVALS
           <div class="fs-5 text-start text-secondary mt-1">
-            Lorem is the best thought of orange.
+            Discover our freshest arrivals,
           </div>
         </div>
       </div>
-      
+
       <NewArrivels />
 
 
@@ -104,7 +107,7 @@ const Home = () => {
         <div class="h2 text-start">
           BEST ARRIVALS
           <div class="fs-5 text-start text-secondary mt-1">
-            Lorem is the best thought of orange.
+            Experience our best arrivals
           </div>
         </div>
       </div>
@@ -115,13 +118,13 @@ const Home = () => {
         <div class="h2 text-start">
           OUR BRANDS
           <div class="fs-5 text-start text-secondary mt-1">
-            Lorem is the best thought of orange.
+            Our best brands 
           </div>
         </div>
       </div>
       <Ourbrands />
 
-    
+
 
     </React.Fragment>
   )

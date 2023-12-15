@@ -8,7 +8,7 @@ import { createorUpdateUser } from '../../functions/auth';
 
 
 const Login = () => {
-  const [email, setEmail] = useState("admin@gmail.com");
+  const [email, setEmail] = useState("user@gmail.com");
   const [password, setPassword] = useState("123456789");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -102,7 +102,7 @@ const Login = () => {
           <input type="password" value={password} className="form-control" onChange={(e) => setPassword(e.target.value)} placeholder="Enter Your Password" />
 
           <div className='mt-2 mx-1'>
-            <div> admin portal ! <b> email :</b>admin@gmail.com <b>password : </b> 123456789  </div>
+            {/* <div> admin portal ! <b> email :</b>admin@gmail.com <b>password : </b> 123456789  </div> */}
             <div> user portal ! <b> password :</b>user@gmail.com <b>password : </b> 123456789  </div>
           </div>
 
@@ -124,12 +124,12 @@ const Login = () => {
       <h2 className="h2 text-center mt-5 fw-bold">Login Page</h2>
       <div className="container-fluid mt-5">
         <div className="row">
-          <div className="col-md-4"></div>
-          <div className="col-md">
+          <div className="col-lg col-md-3"></div>
+          <div className="col-lg col-md">
             {loginForm()}
             <button className='btn btn-outline-danger' onClick={handleGoogleLogin}>Login With google  </button>
           </div>
-          <div className="col-md-4"></div>
+          <div className="col-lg-4 col-md-3"></div>
         </div>
       </div>
     </React.Fragment>

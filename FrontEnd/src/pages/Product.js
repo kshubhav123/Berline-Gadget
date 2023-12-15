@@ -49,14 +49,17 @@ const Product = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row pt-4">
+
+      <div className="row py-3">
         <SingleProduct product={product} handleStar={handleStar} star={star} />
       </div>
+
+
 
       <div className="row">
         <div className="col text-center pt-5 pb-5">
           <hr />
-          <h4>Related Products</h4>
+          <h4 className='fw-bold'>Related Products</h4>
           <hr />
           <div className="container">
             <div className="row">
@@ -64,7 +67,7 @@ const Product = () => {
               {related.length ? (
                 related.map((r, index) => {
                   return (
-                    <div key={index} className="col-md-3">
+                    <div key={index} className="col-lg-3 col-md-6 col-sm-12 my-3">
                       <ProductCard products={r} />
                     </div>
                   )

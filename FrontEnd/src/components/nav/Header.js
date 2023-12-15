@@ -23,10 +23,6 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg bg-light navbar-light shadow">
         <div className="container">
 
-          {/* {user && (
-            <Link className="navbar-brand" to="/">  {user.email && user.email.split("@")[0]} </Link>
-          )} */}
-
           <a href="/" class="d-flex align-items-center fs-5 text-primary me-3 text-decoration-none">
             <i class="fa-solid fa-binoculars"></i>
           </a>
@@ -39,7 +35,7 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 mx-3">
+            <ul className="navbar-nav mx-auto text-center my-2 mb-lg-0 mx-3">
               <li className="nav-item px-3">
                 <Link className="nav-link active fs-6" aria-current="page" to="/">Home</Link>
               </li>
@@ -49,18 +45,18 @@ const Header = () => {
               <li className="nav-item px-3">
                 <Link className="nav-link fs-6" aria-current="page" to="/brandslist">Brands</Link>
               </li>
-             
+
             </ul>
-            <form className="d-flex" role="search">
+            <form className="d-flex justify-content-center" role="search">
               {!user && (
                 <div className="nav-item me-2">
-                  <Link className="nav-link active ps-3 btn-dark fs-5" aria-current="page" to="/login">Login</Link>
+                  <Link className="nav-link active px-3 btn-dark fs-6" aria-current="page" to="/login">Login</Link>
                 </div>
               )}
-                </form>
-                
+            </form>
+
             {user && (
-              <button class="btn get_strBtn text-dark me-5 mt-1 px-3 py-2 ms-1 rounded-pill" onClick={logout}> Logout</button>
+              <button class="btn get_strBtn text-dark me-5 mt-1 rounded-pill text-center" onClick={logout}> Logout</button>
             )}
 
           </div>

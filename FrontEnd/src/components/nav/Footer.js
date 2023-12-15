@@ -3,12 +3,12 @@ import React from 'react'
 const Footer = () => {
   return (
     <div class="container">
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3 my-5 border-top">
         <div class="col mb-3">
-          <a href="/" class="d-flex align-items-center mb-3 fs-1 text-dark link-body-emphasis text-decoration-none">
-          <i class="fa-solid fa-binoculars"></i>
+          <a href="/" class="d-flex align-items-center mb-3 fs-1 text-primary link-body-emphasis text-decoration-none">
+            <i class="fa-solid fa-binoculars"></i>
           </a>
-          <p class="text-body-secondary text-align-justify fs-6"> Promotional merchandise are products branded with a logo or slogan and distributed at little or no cost to promote a brand. </p>
+          <div class="text-body-secondary footer-about fs-6"> Welcome to our online emporium, where sophistication meets convenience. Explore our curated collection of exceptional products.</div>
         </div>
 
         <div class="col mb-3">

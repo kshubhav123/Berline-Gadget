@@ -35,7 +35,7 @@ const NewArrivels = () => {
         <div className='row'>
           {product.map((products, index) => {
             return (
-              <div className='col-lg-3' key={index}>
+              <div className='col-lg-3 col-md-6 col-sm-12 my-3' key={index}>
                 <ProductCard products={products} />
               </div>
             )
@@ -44,7 +44,7 @@ const NewArrivels = () => {
       </div>}
 
       <div className="row">
-        <nav className="col-md-4 offset-md-4 text-center pt-5 p-3">
+        <nav className="col-md-4 offset-md-4 text-center py-5 p-3">
           <Pagination
             current={page}
             total={(productsCount / 4) * 12}

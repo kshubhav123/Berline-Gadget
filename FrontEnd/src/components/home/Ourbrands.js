@@ -21,9 +21,9 @@ const Ourbrands = () => {
                 <div className='row'>
                     {brands.map((brand, index) => {
                         return (
-                            <div className='col-md px-2' key={index}>
-                                <div className='card border-0 banner_down_card'>
-                                    <div className='p-5 my-3 fs-2 text-center rounded-3 shadow fw-bold'>
+                            <div className='col-md p-3' key={index}>
+                                <div className='card border-0 shadow rounded-5'>
+                                    <div className='p-5 my-3 fs-2 text-center rounded-5 fw-bold '>
                                         <Link to={`/shoplist/${brand}`} className="brand_items">{brand.toUpperCase()}</Link>
                                     </div>
                                 </div>

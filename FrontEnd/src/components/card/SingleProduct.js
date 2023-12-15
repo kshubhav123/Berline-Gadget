@@ -44,7 +44,7 @@ const SingleProduct = ({ product, handleStar, star }) => {
 
     const { _id, images } = product;
     return (
-        <div class="container p-3">
+        <div class="container">
             <div className="row">
                 <div className="col-md-5">
                     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
@@ -69,20 +69,21 @@ const SingleProduct = ({ product, handleStar, star }) => {
                         </button>
                     </div>
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-6">
                     <ProductListItems product={product} />
                     <div className="row mt-4">
-                        <div className="col">
+                        <div className="">
                             <Tooltip title={tooltip}>
-                                <button className="btn btn-outline-danger ms-0 mx-3" onClick={handleToCart}>Add To Cart</button>
+                                <button className="btn btn-outline-danger me-3 fs-6" onClick={handleToCart}>Add To Cart</button>
                             </Tooltip>
                             <button className="btn-outline-success btn">Add To Wishlist</button>
-                            <button className="btn btn-outline-dark btn-sm ms-4">
-                                <RatingModel>
-                                    <StarRatings name={_id} class="btn" numberOfStars={5} rating={star} changeRating={handleStar} isSelectable={true} starRatedColor={"red"} />
-                                </RatingModel>
-                            </button>
+
                         </div>
+                        <button className="btn btn-outline-dark w-auto mx-2 my-3">
+                            <RatingModel>
+                                <StarRatings name={_id} class="btn" numberOfStars={5} rating={star} changeRating={handleStar} isSelectable={true} starRatedColor={"red"} />
+                            </RatingModel>
+                        </button>
                     </div>
                 </div>
             </div>

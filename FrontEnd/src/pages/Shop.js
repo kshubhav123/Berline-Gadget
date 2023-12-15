@@ -248,13 +248,13 @@ const Shop = () => {
         <React.Fragment>
             <div className='container'>
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-lg-3 col-md-5">
                         <h3 className='m-4'> Search Filters </h3>
                         {/* <hr /> */}
-                        <Menu defaultOpenKeys={["1", "2"]} mode="inline" className=''>
+                        <Menu defaultOpenKeys={["1", "2"]} mode="inline">
                             <SubMenu key="1" title={
                                 <span className='h6'>
-                                    <DollarOutlined />Price
+                                    <DollarOutlined /> Price
                                 </span>
                             } >
                             </SubMenu>
@@ -375,12 +375,12 @@ const Shop = () => {
 
 
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-lg-9 col-md mt-5">
                         {product.length < 1 && <p className='h4 text-primary py-5 text-center'> No Product Found </p>}
                         <div className="row">
                             {product.map((p, index) => {
                                 return (
-                                    <div className='col-lg-4 px-4' key={index}>
+                                    <div className='col-lg-4 col-md px-4 mb-4' key={index}>
                                         <ProductCard products={p} />
                                     </div>
                                 )

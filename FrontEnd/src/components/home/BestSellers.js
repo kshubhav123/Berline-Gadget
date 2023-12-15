@@ -34,7 +34,7 @@ const BestSellers = () => {
         <div className='row'>
           {product.map((products,index) => {
             return (
-              <div className='col-lg-3' key={index}>
+              <div className='col-lg-3 col-md-6 col-sm-12 my-3' key={index}>
                 <ProductCard products={products} />
               </div>
             )
