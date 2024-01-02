@@ -49,7 +49,7 @@ const ProductCard = ({ products }) => {
         <img height="220" class="card-img-top rounded-4" src={images && images.length ? images[0].url : "https://user-images.githubusercontent.com/10515204/56117400-9a911800-5f85-11e9-878b-3f998609a6c8.jpg"} alt="..." />
 
         <div class="card-body">
-          <div class="h4 card-title text-center capitalize-first">{title}</div>
+          <div class="h4 card-title text-center capitalize-first">{title.substring(0,18)}</div>
           <p class="card-text text-center text-justify text-secondary px-3 fs-6">{description.substring(0, 40)}...</p>
 
           <div className='d-flex justify-content-around mt-4 py-2'>
